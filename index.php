@@ -12,25 +12,41 @@ $text = "Un giovane Jedi, di nome Dart Fener, che era stato mio allievo finché 
 </head>
 
 <body>
-<h3>Suggerimento:"Aggiungi alla barra di ricerca dopo <em>/php-badwords/</em>  questo parametro <em>?badword=</em>  aggiungendo dopo l'uguale la parola che desideri censurare   "</h3>
-<h2>STRINGA NON CENSURATA</h2>
+    <h3>Suggerimento:"Aggiungi alla barra di ricerca dopo <em>/php-badwords/</em> questo parametro <em>?badword=</em> aggiungendo dopo l'uguale la parola che desideri censurare "</h3>
+    <h2>STRINGA NON CENSURATA</h2>
     <p>
-          <!-- Stampo la stringa  -->
-        <?php echo $text ?>
+        <?php
+        /* <!-- Stampo la stringa  --> */
+        echo $text 
+        ?>
     </p>
 
     <p>lunghezza stringa
-        <!-- Stampo la lungezza della stringa  -->
-        <?php echo strlen($text) ?>
+        <?php
+        /* <!-- Stampo la lungezza della stringa  --> */
+        echo strlen($text) 
+        ?>
         caratteri
     </p>
     <h2>STRINGA CENSURATA</h2>
     <p>
-        <!--ESEMPIO. Scrivendo nella barra di ricerca  
-         http://localhost/PHP/php-badwords/?badword=Jedi   
-         la parola Jedi verrà censurata
-        -->
-        <?php echo str_replace($_GET['badword'], '***', $text) ?>
+
+        <?php
+        /* ESEMPIO. Scrivendo nella barra di ricerca  
+            http://localhost/PHP/php-badwords/?badword=Jedi   
+            la parola Jedi verrà censurata
+           */
+         $censored_text = str_replace($_GET['badword'], '***', $text) ;
+         echo $censored_text
+        ?>
+    </p>
+    <p>
+        lunghezza stringa censurata
+        <?php
+        /*  <!-- Stampo la lungezza della stringa  --> */
+        echo strlen($censored_text) 
+        ?>
+        caratteri
     </p>
 </body>
 
