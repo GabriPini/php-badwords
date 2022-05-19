@@ -11,8 +11,8 @@ $text = "Un giovane Jedi, di nome Dart Fener, che era stato mio allievo finché 
     <title>Badword</title>
 </head>
 
-<body>
-    <h3>Suggerimento:"Aggiungi alla barra di ricerca dopo <em>/php-badwords/</em> questo parametro <em>?badword=</em> aggiungendo dopo l'uguale la parola che desideri censurare "</h3>
+<body style="background-color: black; color:white ; text-align:center">
+    <h1>Suggerimento:"Aggiungi alla barra di ricerca dopo <em>/php-badwords/</em> questo parametro <em>?badword=</em> aggiungendo dopo l'uguale la parola che desideri censurare "</h1>
     <h2>STRINGA NON CENSURATA</h2>
     <p>
         <?php
@@ -48,6 +48,8 @@ $text = "Un giovane Jedi, di nome Dart Fener, che era stato mio allievo finché 
         ?>
         caratteri
     </p>
+    <img src="https://brighterworld.mcmaster.ca/wp-content/uploads/sites/2/2018/01/shutterstock_342247694_Converted.jpg" alt="">
+    
 </body>
 
 </html>
